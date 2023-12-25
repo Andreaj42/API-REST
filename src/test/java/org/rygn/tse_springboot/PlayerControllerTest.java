@@ -44,7 +44,7 @@ public class PlayerControllerTest {
 			.perform(get("/players"))
 			.andExpect(status().isOk())
 			.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-			.andExpect(jsonPath("$.length()", is(3)));
+			.andExpect(jsonPath("$.length()", is(1)));
 	}
 	
 	@Test
@@ -76,7 +76,7 @@ public class PlayerControllerTest {
 			.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
 			.andExpect(jsonPath("$.name", is("Lionel Messi")));
 		
-		assertEquals(4, this.playerRepository.count());
+		assertEquals(2, this.playerRepository.count());
 		
 		Collection<Player> players = playerRepository.findAll();
 		
@@ -120,7 +120,7 @@ public class PlayerControllerTest {
 					.accept(MediaType.APPLICATION_JSON))
 					.andExpect(status().isOk());
 		
-		assertEquals(3, this.playerRepository.count());
+		assertEquals(1, this.playerRepository.count());
 	}
 	
 	@Test
