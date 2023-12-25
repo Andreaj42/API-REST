@@ -15,8 +15,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.util.Collection;
 
 import org.junit.jupiter.api.Test;
-import org.rygn.tse_springboot.dao.AnimalRepository;
-import org.rygn.tse_springboot.domain.Animal;
+import org.rygn.tse_springboot.dao.PlayerRepository;
+import org.rygn.tse_springboot.domain.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,66 +29,66 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-public class ZooControllerTest {
+public class PlayerControllerTest {
 
 	@Autowired
 	private MockMvc mockMvc;
 	
 	@Autowired
-	private AnimalRepository animalRepository;
+	private PlayerRepository playerRepository;
 	
 	@Test
-	public void testAllAnimals()  throws Exception{
+	public void testAllPlayers()  throws Exception{
 		
 		this.mockMvc
-			.perform(get("/animals"))
+			.perform(get("/players"))
 			.andExpect(status().isOk())
 			.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
 			.andExpect(jsonPath("$.length()", is(3)));
 	}
 	
 	@Test
-	public void testOneAnimal()  throws Exception{
+	public void testOnePlayer()  throws Exception{
 		
 		this.mockMvc
-			.perform(get("/animals/1"))
+			.perform(get("/players/1"))
 			.andExpect(status().isOk())
 			.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-			.andExpect(jsonPath("$.name", is("Girafe")));
+			.andExpect(jsonPath("$.name", is("Christiano Ronaldo")));
 	}
 	
 	@Test
-	public void testCreateAnimal()  throws Exception{
+	public void testCreatePlayer()  throws Exception{
 		
-		Animal animal = new Animal();
-		animal.setName("Hippopotame");
+		Player player = new Player();
+		player.setName("Lionel Messi");
 		
 		ObjectMapper mapper = new ObjectMapper();
-        byte[] animalAsBytes = mapper.writeValueAsBytes(animal);
+        byte[] playerAsBytes = mapper.writeValueAsBytes(player);
 		
 		
 		this.mockMvc
 			.perform(
-					post("/animals")
+					post("/players")
 					.accept(MediaType.APPLICATION_JSON)
-					.contentType(MediaType.APPLICATION_JSON).content(animalAsBytes))
+					.contentType(MediaType.APPLICATION_JSON).content(playerAsBytes))
 			.andExpect(status().isOk())
 			.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-			.andExpect(jsonPath("$.name", is("Hippopotame")));
+			.andExpect(jsonPath("$.name", is("Lionel Messi")));
 		
-		assertEquals(4, this.animalRepository.count());
+		assertEquals(4, this.playerRepository.count());
 		
-		Collection<Animal> animals = animalRepository.findAll();
+		Collection<Player> players = playerRepository.findAll();
 		
 		boolean found = false;
 		
-		for (Animal currentAnimal : animals) {
+		for (Player currentPlayer : players) {
 			
-			if (currentAnimal.getName().equals("Hippopotame")) {
+			if (currentPlayer.getName().equals("Lionel Messi")) {
 				
 				found = true;
 				
-				animalRepository.delete(currentAnimal);
+				playerRepository.delete(currentPlayer);
 			}
 		}
 		
@@ -96,59 +96,59 @@ public class ZooControllerTest {
 	}
 	
 	@Test
-	public void testDeleteAnimal() throws Exception {
+	public void testDeletePlayer() throws Exception {
 		
-		Animal animal = new Animal();
-		animal.setName("Zèbre");
+		Player player = new Player();
+		player.setName("Kylian Mbappe");
 		
-		this.animalRepository.save(animal);
+		this.playerRepository.save(player);
 		
-		Collection<Animal> animals = this.animalRepository.findAll();
+		Collection<Player> players = this.playerRepository.findAll();
 		
 		Long id = 0L;
 		
-		for (Animal currentAnimal : animals) {
+		for (Player currentPlayer : players) {
 			
-			if (currentAnimal.getName().equals("Zèbre")) {
+			if (currentPlayer.getName().equals("Kylian Mbappe")) {
 				
-				id = currentAnimal.getId();
+				id = currentPlayer.getId();
 			}
 		}
 		
 		this.mockMvc.perform(
-					delete("/animals/" + id)
+					delete("/players/" + id)
 					.accept(MediaType.APPLICATION_JSON))
 					.andExpect(status().isOk());
 		
-		assertEquals(3, this.animalRepository.count());
+		assertEquals(3, this.playerRepository.count());
 	}
 	
 	@Test
-	public void testReplaceAnimal() throws Exception {
+	public void testReplacePlayer() throws Exception {
 		
-		Animal animal = new Animal();
-		animal.setName("Gorille");
+		Player player = new Player();
+		player.setName("Hugo Lloris");
 		
 		ObjectMapper mapper = new ObjectMapper();
-        byte[] animalAsBytes = mapper.writeValueAsBytes(animal);
+        byte[] playerAsBytes = mapper.writeValueAsBytes(player);
         
         this.mockMvc.perform(
-						put("/animals/1")
+						put("/players/1")
 						.accept(MediaType.APPLICATION_JSON)
-						.contentType(MediaType.APPLICATION_JSON).content(animalAsBytes))
+						.contentType(MediaType.APPLICATION_JSON).content(playerAsBytes))
 						.andExpect(status().isOk());
         
-        animal = this.animalRepository.findById(1L).orElse(null);
+        player = this.playerRepository.findById(1L).orElse(null);
         
-        if (animal == null) {
+        if (player == null) {
         	
-        	fail("Animal not found");
+        	fail("Player not found");
         }
         
-        assertEquals("Gorille", animal.getName());
+        assertEquals("Hugo Lloris", player.getName());
         
-        animal.setName("Girafe");
+        player.setName("Kylian Mbappe");
         
-        this.animalRepository.save(animal);
+        this.playerRepository.save(player);
 	}
 }
