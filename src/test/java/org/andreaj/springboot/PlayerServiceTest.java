@@ -1,12 +1,12 @@
-package org.rygn.tse_springboot;
+package org.andreaj.springboot;
 
 import java.util.Collection;
 
+import org.andreaj.springboot.dao.PlayerRepository;
+import org.andreaj.springboot.domain.Player;
+import org.andreaj.springboot.service.PlayerService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.rygn.tse_springboot.dao.PlayerRepository;
-import org.rygn.tse_springboot.domain.Player;
-import org.rygn.tse_springboot.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;

@@ -1,12 +1,12 @@
-package org.rygn.tse_springboot.application;
+package org.andreaj.springboot.application;
 
-import org.rygn.tse_springboot.dao.PlayerRepository;
-import org.rygn.tse_springboot.domain.Player;
+import org.andreaj.springboot.dao.PlayerRepository;
+import org.andreaj.springboot.domain.Player;
+import org.andreaj.springboot.domain.enums.PositionEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-import org.rygn.tse_springboot.domain.enums.PositionEnum;
 
 
 @Component

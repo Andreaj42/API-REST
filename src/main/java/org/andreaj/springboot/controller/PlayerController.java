@@ -1,9 +1,9 @@
-package org.rygn.tse_springboot.controller;
+package org.andreaj.springboot.controller;
 
 import java.util.List;
 
-import org.rygn.tse_springboot.domain.Player;
-import org.rygn.tse_springboot.service.PlayerService;
+import org.andreaj.springboot.domain.Player;
+import org.andreaj.springboot.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

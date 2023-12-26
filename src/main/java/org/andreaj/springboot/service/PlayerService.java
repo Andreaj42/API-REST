@@ -1,8 +1,8 @@
-package org.rygn.tse_springboot.service;
+package org.andreaj.springboot.service;
 
 import java.util.List;
 
-import org.rygn.tse_springboot.domain.Player;
+import org.andreaj.springboot.domain.Player;
 
 public interface PlayerService {
 

@@ -1,4 +1,4 @@
-package org.rygn.tse_springboot;
+package org.andreaj.springboot;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,9 +14,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import java.util.Collection;
 
+import org.andreaj.springboot.dao.PlayerRepository;
+import org.andreaj.springboot.domain.Player;
 import org.junit.jupiter.api.Test;
-import org.rygn.tse_springboot.dao.PlayerRepository;
-import org.rygn.tse_springboot.domain.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;

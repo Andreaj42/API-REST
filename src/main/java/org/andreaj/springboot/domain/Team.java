@@ -1,4 +1,4 @@
-package org.rygn.tse_springboot.domain;
+package org.andreaj.springboot.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Team {
-	
+
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -15,7 +15,7 @@ public class Team {
 	private String stadium;
 	private String trainer;
 
-	public Team() {		
+	public Team() {
 	}
 
 	public Long getId() {
@@ -25,7 +25,7 @@ public class Team {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -34,28 +34,27 @@ public class Team {
 		this.name = name;
 	}
 
-	public String[] getColor(){
+	public String[] getColor() {
 		return color;
 	}
 
-	public void setColor(String[] color){
+	public void setColor(String[] color) {
 		this.color = color;
 	}
 
-	public String getStadium(){
+	public String getStadium() {
 		return stadium;
 	}
 
-	public void setStadium(String stadium){
+	public void setStadium(String stadium) {
 		this.stadium = stadium;
 	}
 
-	public String getTrainer(){
+	public String getTrainer() {
 		return trainer;
 	}
 
-	public void setTrainer(String trainer){
+	public void setTrainer(String trainer) {
 		this.trainer = trainer;
 	}
 }
-

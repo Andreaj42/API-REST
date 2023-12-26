@@ -1,4 +1,4 @@
-package org.rygn.tse_springboot.domain;
+package org.andreaj.springboot.domain;
 
 import java.util.Date;
 
@@ -6,12 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import org.rygn.tse_springboot.domain.enums.PositionEnum;
-
+import org.andreaj.springboot.domain.enums.PositionEnum;
 
 @Entity
 public class Player {
-	
+
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -23,7 +22,7 @@ public class Player {
 	private Float height;
 	private Float weight;
 
-	public Player() {		
+	public Player() {
 	}
 
 	public Long getId() {
@@ -33,7 +32,7 @@ public class Player {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -42,7 +41,7 @@ public class Player {
 		this.name = name;
 	}
 
-	public PositionEnum  getPosition() {
+	public PositionEnum getPosition() {
 		return position;
 	}
 
@@ -58,11 +57,11 @@ public class Player {
 		this.age = age;
 	}
 
-	public Date getBirthdate(){
+	public Date getBirthdate() {
 		return birthdate;
 	}
 
-	public void setBirthdate(Date birthdate){
+	public void setBirthdate(Date birthdate) {
 		this.birthdate = birthdate;
 	}
 
@@ -82,12 +81,11 @@ public class Player {
 		this.height = height;
 	}
 
-
 	public Float getWeight() {
 		return weight;
 	}
 
 	public void setWeight(Float weight) {
 		this.weight = weight;
-	}	
+	}
 }

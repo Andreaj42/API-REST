@@ -1,8 +1,8 @@
-package org.rygn.tse_springboot.service;
+package org.andreaj.springboot.service;
 
 import java.util.List;
 
-import org.rygn.tse_springboot.domain.Team;
+import org.andreaj.springboot.domain.Team;
 
 public interface TeamService {
 

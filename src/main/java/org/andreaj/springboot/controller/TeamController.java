@@ -1,9 +1,9 @@
-package org.rygn.tse_springboot.controller;
+package org.andreaj.springboot.controller;
 
 import java.util.List;
 
-import org.rygn.tse_springboot.domain.Team;
-import org.rygn.tse_springboot.service.TeamService;
+import org.andreaj.springboot.domain.Team;
+import org.andreaj.springboot.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package org.rygn.tse_springboot;
+package org.andreaj.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

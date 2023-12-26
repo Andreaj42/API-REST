@@ -1,6 +1,6 @@
-package org.rygn.tse_springboot.dao;
+package org.andreaj.springboot.dao;
 
-import org.rygn.tse_springboot.domain.Team;
+import org.andreaj.springboot.domain.Team;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TeamRepository extends JpaRepository<Team, Long> {
