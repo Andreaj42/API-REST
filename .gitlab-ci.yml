@@ -8,8 +8,7 @@ sonarqube-check:
     paths:
       - .sonar/cache
   script: 
-    - mvn clean install -e
-    - mvn verify sonar:sonar -Dsonar.projectKey=joly.andrea_td-rest-api_AYyjSnLPu6L9HTu-0aYS
+    - mvn verify -e sonar:sonar -Dsonar.projectKey=joly.andrea_td-rest-api_AYyjSnLPu6L9HTu-0aYS
   allow_failure: true
   only:
     - main
