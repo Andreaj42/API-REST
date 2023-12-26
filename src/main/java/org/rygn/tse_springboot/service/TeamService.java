@@ -10,7 +10,7 @@ public interface TeamService {
 
 	public Team findTeam(Long id);
 
-	public Team createTeam(Team Team);
+	public Team createTeam(Team team);
 
 	public void deleteTeam(Long id);
 

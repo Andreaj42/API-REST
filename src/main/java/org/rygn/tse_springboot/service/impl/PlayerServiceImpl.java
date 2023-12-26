@@ -14,37 +14,37 @@ import org.springframework.transaction.annotation.Transactional;
 public class PlayerServiceImpl implements PlayerService {
 
 	@Autowired
-	private PlayerRepository PlayerRepository;
+	private PlayerRepository playerRepository;
 
 	@Override
 	@Transactional(readOnly = true)
 	public List<Player> findAllPlayers() {
 
-		return this.PlayerRepository.findAll();
+		return this.playerRepository.findAll();
 	}
 
 	@Override
 	@Transactional(readOnly = true)
 	public Player findPlayer(Long id) {
 
-		return this.PlayerRepository.findById(id).orElse(null);
+		return this.playerRepository.findById(id).orElse(null);
 	}
 
 	@Override
-	public Player createPlayer(Player Player) {
+	public Player createPlayer(Player player) {
 
-		return this.PlayerRepository.save(Player);
+		return this.playerRepository.save(player);
 	}
 
 	@Override
 	public void deletePlayer(Long id) {
 
-		this.PlayerRepository.deleteById(id);
+		this.playerRepository.deleteById(id);
 	}
 
 	@Override
 	public Player savePlayer(Player foundPlayer) {
 
-		return this.PlayerRepository.save(foundPlayer);
+		return this.playerRepository.save(foundPlayer);
 	}
 }
