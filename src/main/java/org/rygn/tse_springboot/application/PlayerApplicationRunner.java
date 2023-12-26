@@ -20,5 +20,16 @@ public class PlayerApplicationRunner implements ApplicationRunner {
 		cronaldo.setName("Christiano Ronaldo");
 		cronaldo.setPosition("attaquant");
 		this.playerRepository.save(cronaldo);
+
+		Player kmbappe = new Player();
+		kmbappe.setName("Kylian Mbappe");
+		kmbappe.setPosition("attaquant");
+		this.playerRepository.save(kmbappe);
+
+		Player lmessi = new Player();
+		lmessi.setName("Lionel Messi");
+		lmessi.setPosition("attaquant");
+		this.playerRepository.save(lmessi);
+
 	}
 }
