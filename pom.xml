@@ -6,13 +6,13 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
-	<groupId>org.rygn</groupId>
-	<artifactId>tse_springboot_web_jpa</artifactId>
+	<groupId>org.andreaj</groupId>
+	<artifactId>td_springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>tse_springboot_web_jpa</name>
-	<description>Demo project for Spring Boot</description>
+	<name>td_springboot</name>
+	<description> TD Spring Boot</description>
 
 	<properties>
 		<java.version>11</java.version>
