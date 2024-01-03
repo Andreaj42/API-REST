@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.andreaj.springboot.domain.enums.PositionEnum;;
+
 
 @Entity
 public class Player {
@@ -14,7 +16,7 @@ public class Player {
 	@GeneratedValue
 	private Long id;
 	private String name;
-	private String position;
+	private PositionEnum position;
 	private Integer age;
 	private Date birthdate;
 	private String nationality;
@@ -40,11 +42,11 @@ public class Player {
 		this.name = name;
 	}
 
-	public String getPosition() {
+	public PositionEnum getPosition() {
 		return position;
 	}
 
-	public void setPosition(String position) {
+	public void setPosition(PositionEnum position) {
 		this.position = position;
 	}
 
