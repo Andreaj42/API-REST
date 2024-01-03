@@ -12,13 +12,14 @@ public class TeamApplicationRunner implements ApplicationRunner {
 
 	@Autowired
 	private TeamRepository teamRepository;
-	
+
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		
 		Team france = new Team();
-		france.setName("France");		
+		france.setName("France");
+		france.setColor(new String[] { "Bleu", "Blanc", "Rouge" });
+		france.setStadium("Stade de France");
+        france.setTrainer("Didier Deschamps");
 		this.teamRepository.save(france);
-		
 	}
 }
