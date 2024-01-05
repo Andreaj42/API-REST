@@ -16,6 +16,11 @@ public class Team {
 	private String trainer;
 
 	public Team() {
+		/**
+		 * Constructor for the Team class.
+		 * This constructor is intentionally left empty as it is used for object
+		 * instantiation without initializing any specific attributes.
+		 **/
 	}
 
 	public Long getId() {
