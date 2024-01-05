@@ -29,7 +29,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-public class PlayerControllerTest {
+class PlayerControllerTest {
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -38,7 +38,7 @@ public class PlayerControllerTest {
 	private PlayerRepository playerRepository;
 
 	@Test
-	public void testAllPlayers() throws Exception {
+	void testAllPlayers() throws Exception {
 
 		this.mockMvc
 				.perform(get("/players"))
@@ -48,7 +48,7 @@ public class PlayerControllerTest {
 	}
 
 	@Test
-	public void testOnePlayer() throws Exception {
+	void testOnePlayer() throws Exception {
 
 		this.mockMvc
 				.perform(get("/players/1"))
@@ -58,7 +58,7 @@ public class PlayerControllerTest {
 	}
 
 	@Test
-	public void testCreatePlayer() throws Exception {
+	void testCreatePlayer() throws Exception {
 
 		Player player = new Player();
 		player.setName("Lionel Messi");
@@ -95,7 +95,7 @@ public class PlayerControllerTest {
 	}
 
 	@Test
-	public void testDeletePlayer() throws Exception {
+	void testDeletePlayer() throws Exception {
 
 		Player player = new Player();
 		player.setName("Kylian Mbappe");
@@ -123,7 +123,7 @@ public class PlayerControllerTest {
 	}
 
 	@Test
-	public void testReplacePlayer() throws Exception {
+	void testReplacePlayer() throws Exception {
 
 		Player player = new Player();
 		player.setName("Hugo Lloris");

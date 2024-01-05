@@ -13,7 +13,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
 @ActiveProfiles("test")
-public class PlayerServiceTest {
+class PlayerServiceTest {
 
 	@Autowired
 	private PlayerService playerService;
@@ -22,7 +22,7 @@ public class PlayerServiceTest {
 	private PlayerRepository playerRepository;
 	
 	@Test
-	public void testFindAllPlayers()  throws Exception{
+	void testFindAllPlayers()  throws Exception{
 		
 		Collection<Player> allPlayers = this.playerService.findAllPlayers();
 		
@@ -30,7 +30,7 @@ public class PlayerServiceTest {
 	}
 	
 	@Test
-	public void testFindPlayer()  throws Exception{
+	void testFindPlayer()  throws Exception{
 		
 		Player player = this.playerService.findPlayer(1L);
 		
@@ -38,7 +38,7 @@ public class PlayerServiceTest {
 	}
 		
 	@Test
-	public void testCreatePlayer()  throws Exception{
+	void testCreatePlayer()  throws Exception{
 		
 		Player player = new Player();
 		player.setName("Kylian Mbappe");
@@ -53,7 +53,7 @@ public class PlayerServiceTest {
 	}
 		
 	@Test
-	public void testDeletePlayer() throws Exception {
+	void testDeletePlayer() throws Exception {
 		
 		this.playerService.deletePlayer(3L);
 		
@@ -67,7 +67,7 @@ public class PlayerServiceTest {
 	}
 		
 	@Test
-	public void testUpdatePlayer() throws Exception {
+	void testUpdatePlayer() throws Exception {
 		
 		Player player = this.playerRepository.findById(2L).orElse(null);
 		
