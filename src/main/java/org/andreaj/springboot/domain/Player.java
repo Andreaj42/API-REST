@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import org.andreaj.springboot.domain.enums.PositionEnum;;
+import org.andreaj.springboot.domain.enums.PositionEnum;
 
 
 @Entity
