@@ -1,4 +1,4 @@
-package org.andreaj.springboot;
+package org.andreaj.springboot.v1.player;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,8 +14,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import java.util.Collection;
 
-import org.andreaj.springboot.dao.PlayerRepository;
-import org.andreaj.springboot.domain.Player;
+import org.andreaj.springboot.v1.dao.PlayerRepository;
+import org.andreaj.springboot.v1.domain.Player;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -49,7 +49,6 @@ class PlayerControllerTest {
 
 	@Test
 	void testOnePlayer() throws Exception {
-
 		this.mockMvc
 				.perform(get("/players/1"))
 				.andExpect(status().isOk())
@@ -59,7 +58,6 @@ class PlayerControllerTest {
 
 	@Test
 	void testCreatePlayer() throws Exception {
-
 		Player player = new Player();
 		player.setName("Lionel Messi");
 
