@@ -48,9 +48,26 @@ public class PlayerController {
 
 		Player foundPlayer = this.playerService.findPlayer(id);
 
-		if (player != null) {
+		if (player != null && foundPlayer != null) {
 
-			foundPlayer.setName(player.getName());
+			if (player.getName() != null) {
+				foundPlayer.setName(player.getName());
+			}
+			if (player.getPosition() != null) {
+				foundPlayer.setPosition(player.getPosition());
+			}
+			if (player.getBirthdate() != null) {
+				foundPlayer.setBirthdate(player.getBirthdate());
+			}
+			if (player.getNationality() != null) {
+				foundPlayer.setNationality(player.getNationality());
+			}
+			if (player.getHeight() != null) {
+				foundPlayer.setHeight(player.getHeight());
+			}
+			if (player.getWeight() != null) {
+				foundPlayer.setWeight(player.getWeight());
+			}
 
 			foundPlayer = this.playerService.savePlayer(foundPlayer);
 		}
