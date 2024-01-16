@@ -37,3 +37,12 @@ L'API devrait maintenant être accessible à l'adresse [http://localhost:8080](h
     ```bash
     curl http://localhost:8080/api/v1/teams
     ```
+
+## Exemple d'utilisation via Axios
+Dans le dossier scripts, il existe des scripts Node.js d'exemples d'utilisation de l'API.
+Assurez-vous d'utiliser les commandes suivantes pour exécuter ces scripts.
+
+    ```bash
+    npm install
+    node getTeams.js
+    ```
