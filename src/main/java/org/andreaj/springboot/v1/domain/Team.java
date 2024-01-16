@@ -25,15 +25,6 @@ public class Team {
     @JoinColumn(name="teamId")
     private List<Player> players = new ArrayList<>();
 
-
-	public Team() {
-		/**
-		 * Constructor for the Team class.
-		 * This constructor is intentionally left empty as it is used for object
-		 * instantiation without initializing any specific attributes.
-		 **/
-	}
-
 	public Long getId() {
 		return id;
 	}

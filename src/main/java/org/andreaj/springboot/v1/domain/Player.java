@@ -23,14 +23,6 @@ public class Player {
 	private Float height;
 	private Float weight;
 
-	public Player() {
-		/**
-		 * Constructor for the Player class.
-		 * This constructor is intentionally left empty as it is used for object
-		 * instantiation without initializing any specific attributes.
-		 **/
-	}
-
 	public Long getId() {
 		return id;
 	}
