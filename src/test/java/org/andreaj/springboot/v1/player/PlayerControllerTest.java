@@ -39,21 +39,20 @@ class PlayerControllerTest {
 
 	@Test
 	void testAllPlayers() throws Exception {
-
 		this.mockMvc
-				.perform(get("/players"))
+				.perform(get("/api/v1/players"))
 				.andExpect(status().isOk())
 				.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-				.andExpect(jsonPath("$.length()", is(2)));
+				.andExpect(jsonPath("$.length()", is(6)));
 	}
 
 	@Test
 	void testOnePlayer() throws Exception {
 		this.mockMvc
-				.perform(get("/players/1"))
+				.perform(get("/api/v1/players/1"))
 				.andExpect(status().isOk())
 				.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-				.andExpect(jsonPath("$.name", is("Christiano Ronaldo")));
+				.andExpect(jsonPath("$.name", is("Kylian Mbappé")));
 	}
 
 	@Test
@@ -66,14 +65,14 @@ class PlayerControllerTest {
 
 		this.mockMvc
 				.perform(
-						post("/players")
+						post("/api/v1/players")
 								.accept(MediaType.APPLICATION_JSON)
 								.contentType(MediaType.APPLICATION_JSON).content(playerAsBytes))
 				.andExpect(status().isOk())
 				.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
 				.andExpect(jsonPath("$.name", is("Lionel Messi")));
 
-		assertEquals(4, this.playerRepository.count());
+		assertEquals(7, this.playerRepository.count());
 
 		Collection<Player> players = playerRepository.findAll();
 
@@ -107,17 +106,16 @@ class PlayerControllerTest {
 		for (Player currentPlayer : players) {
 
 			if (currentPlayer.getName().equals("Kylian Mbappe")) {
-
 				id = currentPlayer.getId();
 			}
 		}
 
 		this.mockMvc.perform(
-				delete("/players/" + id)
+				delete("/api/v1/players/" + id)
 						.accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk());
 
-		assertEquals(2, this.playerRepository.count());
+		assertEquals(6, this.playerRepository.count());
 	}
 
 	@Test
@@ -130,7 +128,7 @@ class PlayerControllerTest {
 		byte[] playerAsBytes = mapper.writeValueAsBytes(player);
 
 		this.mockMvc.perform(
-				put("/players/1")
+				put("/api/v1/players/1")
 						.accept(MediaType.APPLICATION_JSON)
 						.contentType(MediaType.APPLICATION_JSON).content(playerAsBytes))
 				.andExpect(status().isOk());
