@@ -1,9 +1,9 @@
-package org.andreaj.springboot.controller;
+package org.andreaj.springboot.v1.controller;
 
 import java.util.List;
 
-import org.andreaj.springboot.domain.Team;
-import org.andreaj.springboot.service.TeamService;
+import org.andreaj.springboot.v1.domain.Team;
+import org.andreaj.springboot.v1.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,31 +20,31 @@ public class TeamController {
 	@Autowired
 	private TeamService teamService;
 	
-	@GetMapping("/teams")
+	@GetMapping("/api/v1/teams")
 	public List<Team> allTeams() {
 				
 		return this.teamService.findAllTeams();
 	}
 	
-	@GetMapping("/teams/{id}")
+	@GetMapping("/api/v1/teams/{id}")
 	public Team oneTeam(@PathVariable Long id) {
 				
 		return this.teamService.findTeam(id);
 	}
 	
-	@PostMapping("/teams")
+	@PostMapping("/api/v1/teams")
 	public Team createTeam(@RequestBody Team team) {
 		
 		return this.teamService.createTeam(team);
 	}
 	
-	@DeleteMapping("/teams/{id}")
+	@DeleteMapping("/api/v1/teams/{id}")
 	public void deleteTeam(@PathVariable Long id) {
 		
 		this.teamService.deleteTeam(id);
 	}
 	
-	@PutMapping("/teams/{id}")
+	@PutMapping("/api/v1/teams/{id}")
 	Team replaceTeam(@RequestBody Team team, @PathVariable Long id) {
 
 		Team foundTeam = this.teamService.findTeam(id);

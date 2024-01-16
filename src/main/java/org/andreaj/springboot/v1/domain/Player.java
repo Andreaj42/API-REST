@@ -1,12 +1,14 @@
-package org.andreaj.springboot.domain;
+package org.andreaj.springboot.v1.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import org.andreaj.springboot.domain.enums.PositionEnum;
+
+import org.andreaj.springboot.v1.domain.enums.PositionEnum;
+
 
 @Entity
 public class Player {
@@ -16,8 +18,7 @@ public class Player {
 	private Long id;
 	private String name;
 	private PositionEnum position;
-	private Integer age;
-	private Date birthdate;
+	private LocalDate birthdate;
 	private String nationality;
 	private Float height;
 	private Float weight;
@@ -54,19 +55,11 @@ public class Player {
 		this.position = position;
 	}
 
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-
-	public Date getBirthdate() {
+	public LocalDate getBirthdate() {
 		return birthdate;
 	}
 
-	public void setBirthdate(Date birthdate) {
+	public void setBirthdate(LocalDate birthdate) {
 		this.birthdate = birthdate;
 	}
 

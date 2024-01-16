@@ -1,4 +1,4 @@
-package org.andreaj.springboot.domain.enums;
+package org.andreaj.springboot.v1.domain.enums;
 
 public enum PositionEnum {
     ATTAQUANT,

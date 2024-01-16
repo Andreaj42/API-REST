@@ -1,10 +1,10 @@
-package org.andreaj.springboot.service.impl;
+package org.andreaj.springboot.v1.service.impl;
 
 import java.util.List;
 
-import org.andreaj.springboot.dao.TeamRepository;
-import org.andreaj.springboot.domain.Team;
-import org.andreaj.springboot.service.TeamService;
+import org.andreaj.springboot.v1.dao.TeamRepository;
+import org.andreaj.springboot.v1.domain.Team;
+import org.andreaj.springboot.v1.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,10 +1,10 @@
-package org.andreaj.springboot.service.impl;
+package org.andreaj.springboot.v1.service.impl;
 
 import java.util.List;
 
-import org.andreaj.springboot.dao.PlayerRepository;
-import org.andreaj.springboot.domain.Player;
-import org.andreaj.springboot.service.PlayerService;
+import org.andreaj.springboot.v1.dao.PlayerRepository;
+import org.andreaj.springboot.v1.domain.Player;
+import org.andreaj.springboot.v1.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

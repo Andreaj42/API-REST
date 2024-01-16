@@ -1,8 +1,8 @@
-package org.andreaj.springboot.service;
+package org.andreaj.springboot.v1.service;
 
 import java.util.List;
 
-import org.andreaj.springboot.domain.Team;
+import org.andreaj.springboot.v1.domain.Team;
 
 public interface TeamService {
 
