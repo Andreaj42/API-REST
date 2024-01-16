@@ -2,7 +2,6 @@ package org.andreaj.springboot.v1.controller;
 
 import java.util.List;
 
-import org.andreaj.springboot.v1.domain.Player;
 import org.andreaj.springboot.v1.domain.Team;
 import org.andreaj.springboot.v1.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
