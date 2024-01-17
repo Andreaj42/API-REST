@@ -11,38 +11,36 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 ## Installation
 
 1. Clonez le dépôt :
-    ```bash
+    ```console
     git clone https://devops.telecomste.fr/joly.andrea/td-rest-api.git
     cd td-rest-api
     ```
 
 2. Compilez le projet avec Maven :
-    ```bash
+    ```console
     mvn clean install
     ```
 
 3. Exécutez l'application :
-    ```bash
+    ```console
     java -jar target/td-rest-api.jar
     ```
 
-L'API devrait maintenant être accessible à l'adresse [http://localhost:8080](http://localhost:8080).
+L'API devrait maintenant être accessible à l'adresse [http://localhost:8080/api/v1](http://localhost:8080/api/v1).
 
-
+ 
 ## Exemple d'utilisation
 
 - Endpoint : `GET /api/v1/exemple`
 - Description : Récupère la liste des équipes disponibles.
-
-    ```bash
+    ```console
     curl http://localhost:8080/api/v1/teams
     ```
 
 ## Exemple d'utilisation via Axios
 Dans le dossier scripts, il existe des scripts Node.js d'exemples d'utilisation de l'API.
 Assurez-vous d'utiliser les commandes suivantes pour exécuter ces scripts.
-
-    ```bash
+    ```console
     npm install
     node getTeams.js
     ```
