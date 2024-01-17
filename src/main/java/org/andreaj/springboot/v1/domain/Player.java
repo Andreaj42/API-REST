@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
@@ -14,7 +15,7 @@ import org.andreaj.springboot.v1.domain.enums.PositionEnum;
 public class Player {
 
 	@Id
-	@GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private PositionEnum position;
