@@ -10,19 +10,32 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 ## Installation
 
+### Production
+
+1. Téléchargez le fichier JAR (Java archive) depuis le lien suivant : 
+    -  [Release v1.0.0 (:sparkles: Macarena :sparkles:)](https://devops.telecomste.fr/joly.andrea/td-rest-api/-/releases/v1.0.0(Macarena))
+
+
+2. Puis, exécutez le JAR 
+
+   ```bash
+    java  -Dfile.encoding=UTF-8 -jar td_springboot-0.0.1-SNAPSHOT.jar
+   ```
+
+### Development
 1. Clonez le dépôt :
-    ```console
+    ```bash
     git clone https://devops.telecomste.fr/joly.andrea/td-rest-api.git
     cd td-rest-api
     ```
 
 2. Compilez le projet avec Maven :
-    ```console
+    ```bash
     mvn clean install
     ```
 
 3. Exécutez l'application :
-    ```console
+    ```bash
     java -jar target/td-rest-api.jar
     ```
 
@@ -31,16 +44,16 @@ L'API devrait maintenant être accessible à l'adresse [http://localhost:8080/ap
  
 ## Exemple d'utilisation
 
-- Endpoint : `GET /api/v1/exemple`
+- Endpoint : `GET /api/v1/example`
 - Description : Récupère la liste des équipes disponibles.
-    ```console
+    ```bash
     curl http://localhost:8080/api/v1/teams
     ```
 
 ## Exemple d'utilisation via Axios
 Dans le dossier scripts, il existe des scripts Node.js d'exemples d'utilisation de l'API.
 Assurez-vous d'utiliser les commandes suivantes pour exécuter ces scripts.
-    ```console
+   ```bash
     npm install
-    node getTeams.js
-    ```
+    node script/getTeams.js
+   ``` 
