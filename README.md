@@ -22,7 +22,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
     java  -Dfile.encoding=UTF-8 -jar td_springboot-0.0.1-SNAPSHOT.jar
    ```
 
-### Development
+### Développement
 1. Clonez le dépôt :
     ```bash
     git clone https://devops.telecomste.fr/joly.andrea/td-rest-api.git
