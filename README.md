@@ -1,7 +1,7 @@
-# Spring Mootse
+# API Rest Spring Boot
 
 ## Description
-Bienvenue dans le projet Spring Mootse, une API développée avec Spring Boot. Cette API permet, au travers de requête REST la gestion de joueurs et d'équipes de football.
+Bienvenue dans ce projet d'API REST développé avec Spring Boot. Cette API permet, au travers de requête REST la gestion de joueurs et d'équipes de football.
 
 ## Prérequis
 Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
@@ -19,7 +19,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 2. Puis, exécutez le JAR 
 
    ```bash
-    java  -Dfile.encoding=UTF-8 -jar td_springboot-0.0.1-SNAPSHOT.jar
+    java -Dfile.encoding=UTF-8 -jar td_springboot-0.0.1-SNAPSHOT.jar
    ```
 
 ### Développement
