@@ -13,7 +13,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 ### Production
 
 1. Téléchargez le fichier JAR (Java archive) depuis le lien suivant : 
-    -  [Release v1.0.0 (:sparkles: Macarena :sparkles:)](https://devops.telecomste.fr/joly.andrea/td-rest-api/-/releases/v1.0.0(Macarena))
+    -  [Release v1.0.0 (:sparkles: Macarena :sparkles:)](https://github.com/Andreaj42/API-REST/releases/tag/v1.0.0(Macarena))
 
 
 2. Puis, exécutez le JAR 
@@ -25,7 +25,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 ### Développement
 1. Clonez le dépôt :
     ```bash
-    git clone https://devops.telecomste.fr/joly.andrea/td-rest-api.git
+    git clone https://github.com/Andreaj42/API-REST.git
     cd td-rest-api
     ```
 
