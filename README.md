@@ -13,7 +13,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 ### Production
 
 1. Téléchargez le fichier JAR (Java archive) depuis le lien suivant : 
-    -  [Release v1.0.0 (:sparkles: Macarena :sparkles:)](https://github.com/Andreaj42/API-REST/releases/tag/v1.0.0(Macarena))
+    -  [Release v1.0.0 (✨ Macarena ✨)](https://github.com/Andreaj42/API-REST/releases/tag/v1.0.0(Macarena))
 
 
 2. Puis, exécutez le JAR 
